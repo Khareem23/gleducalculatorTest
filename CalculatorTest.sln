@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorTest.API", "CalculatorTest.API\CalculatorTest.API.csproj", "{E11D7F4C-6B8C-45A1-A9D2-A1B21001F168}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorTest.Lib", "CalculatorTest.Lib\CalculatorTest.Lib.csproj", "{AFEC2945-E8A1-4FCA-8D41-4249CC162A5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GLEducation.Lib.Test", "GLEducation.Lib.Test\GLEducation.Lib.Test.csproj", "{4D7AD583-D861-4F47-82FC-8DDEAC75A0A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E11D7F4C-6B8C-45A1-A9D2-A1B21001F168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E11D7F4C-6B8C-45A1-A9D2-A1B21001F168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E11D7F4C-6B8C-45A1-A9D2-A1B21001F168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E11D7F4C-6B8C-45A1-A9D2-A1B21001F168}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFEC2945-E8A1-4FCA-8D41-4249CC162A5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFEC2945-E8A1-4FCA-8D41-4249CC162A5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFEC2945-E8A1-4FCA-8D41-4249CC162A5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFEC2945-E8A1-4FCA-8D41-4249CC162A5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D7AD583-D861-4F47-82FC-8DDEAC75A0A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D7AD583-D861-4F47-82FC-8DDEAC75A0A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D7AD583-D861-4F47-82FC-8DDEAC75A0A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D7AD583-D861-4F47-82FC-8DDEAC75A0A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
