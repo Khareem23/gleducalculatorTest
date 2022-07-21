@@ -1,11 +1,12 @@
 ## Project Information
 After implementing the requirements, I decided to go a bit further to document the API 
-using Swagger & deploy the application in azure. This solution uses the following azure services,
+using Swagger and then deploy the applications both the backend API (.Net Core ) and Frontend
+(Angular) in Azure. This solution uses the following azure services,
 
 - Azure Key vault
 - Azure SQL
-- Azure Web App ( App Service)
-- 
+- Azure App Service ( Web App  & Static Web App )
+
 ### Azure SQL
 This service was used to provision MS-SQL Server which is the database used for this
 solution where the log data is stored. The connection string was initially saved
@@ -18,7 +19,7 @@ being a Test Code.
 
 ### Azure App Service ( PAAS )
 The frontend was deployed using Static Web App and the backend deployed with
-Azure Web App. Below is the link to access it Deployment URL :
+Azure Web App. Below are the links to access them :
 
 ### Deployed API URL :
 https://gledu-calculatortest.azurewebsites.net/index.html
@@ -27,12 +28,10 @@ https://gledu-calculatortest.azurewebsites.net/index.html
 https://lemon-wave-076186403.1.azurestaticapps.net/
 
 
-
-
 According to the requirement , there are 2 Implementations 
 of the Diagnostic Interface. The default concrete implementation is the 
-database logger which logs result, operations and timestamp to a MS SQL Server 
-Database deployed by Azure SQL Service.
+database logger which logs result, operations and date&time to a MS SQL Server 
+Database.
 
 To view the the debugOutput logger , Go to CalculatorTest.API, inside the 
 startup.cs file, Uncomment this line & comment the other

@@ -9,7 +9,7 @@ import { IInputData } from 'src/model/InputData';
 export class CalculatorService {
 
     //  private baseUrl = 'http://localhost:5000/';
-     private baseUrl =  'https://gledu-calculatortest.azurewebsites.net'
+     private baseUrl =  'https://gledu-calculatortest.azurewebsites.net/'
 
     httpOptions = {
         headers: new HttpHeaders({
