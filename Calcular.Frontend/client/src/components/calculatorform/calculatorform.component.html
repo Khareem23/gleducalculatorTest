@@ -13,7 +13,9 @@
     <select class="form-control" id="operation" name="operation"   [(ngModel)]="selectedOperation">
       <option *ngFor="let ops of allOperations" [value]="ops">{{ops}}</option>
     </select>
+    <p class="text-danger">{{ isLoadingText }}</p>
   </div>
+
 
   <button type="submit" class="btn btn-primary float-right mb-2"  (click)="calculate()"> Calculate </button>
 

@@ -13,6 +13,8 @@ export class CalculatorformComponent implements OnInit {
   allOperations : string[] = ["Add","Subtract","Multiply","Divide","Other"];
   selectedOperation : string = "Add";
   result : string = "" ;
+  isLoading : boolean = false ;
+  isLoadingText : string = "";
 
   input : IInputData = {
     start: 0,
@@ -26,30 +28,33 @@ export class CalculatorformComponent implements OnInit {
   }
 
   calculate(){
+     this.isLoadingText = "Pls wait, system logging to Database";
      switch(this.selectedOperation)
      {
         case "Add": { 
             this.calculatorService.add(this.input).subscribe((response : string)=>{
-              console.log(response);
+            this.isLoadingText="";
             this.result = response ;
           })
           break; 
         } 
         case "Subtract": { 
           this.calculatorService.subtract(this.input).subscribe((response : string)=>{
-          this.result = response ;
+            this.isLoadingText="";
+            this.result = response ;
         })
         break; 
        } 
        case "Multiply": { 
         this.calculatorService.multiply(this.input).subscribe((response : string)=>{
-        this.result = response ;
+          this.isLoadingText="";
+          this.result = response ;
       })
       break; 
      } 
      case "Divide": { 
       this.calculatorService.divide(this.input).subscribe((response : string)=>{
-
+      this.isLoadingText="";
       this.result = response ;
     })
     break; 
