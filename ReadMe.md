@@ -16,14 +16,16 @@ the Security vulnerabilities of such approach. So, kindly accept this approach f
 being a Test Code.
 
 
-### Azure Web App ( App Service )
-The app was deployed to Azure Web App. Below is the link to access it
-Deployment URL :
+### Azure App Service ( PAAS )
+The frontend was deployed using Static Web App and the backend deployed with
+Azure Web App. Below is the link to access it Deployment URL :
 
 ### Deployed API URL :
 https://gledu-calculatortest.azurewebsites.net/index.html
 
 ### Deployed Frontend :
+https://lemon-wave-076186403.1.azurestaticapps.net/
+
 
 
 

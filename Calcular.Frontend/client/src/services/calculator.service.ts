@@ -8,7 +8,8 @@ import { IInputData } from 'src/model/InputData';
 @Injectable()
 export class CalculatorService {
 
-    private baseUrl = 'http://localhost:5000/';
+    //  private baseUrl = 'http://localhost:5000/';
+     private baseUrl =  'https://gledu-calculatortest.azurewebsites.net'
 
     httpOptions = {
         headers: new HttpHeaders({
