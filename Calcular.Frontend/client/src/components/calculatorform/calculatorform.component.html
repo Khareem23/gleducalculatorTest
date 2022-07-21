@@ -1,0 +1,25 @@
+<form class="">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Start</label>
+    <input type="text" class="form-control" name="start"  [(ngModel)]="input.start" >
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Amount / By</label>
+    <input type="text" class="form-control" name="amountOrBy" [(ngModel)]="input.amountOrBy" >
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1"> Select Operation</label>
+    <select class="form-control" id="operation" name="operation"   [(ngModel)]="selectedOperation">
+      <option *ngFor="let ops of allOperations" [value]="ops">{{ops}}</option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn btn-primary float-right mb-2"  (click)="calculate()"> Calculate </button>
+
+  <div class="form-group clearfix">
+    <label for="exampleFormControlTextarea1"> Result </label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">{{result}}</textarea>
+  </div>
+
+</form>
