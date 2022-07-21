@@ -17,13 +17,15 @@ solution where the log data is stored. The connection string was initially saved
 in Azure Key Vault for security reasons but due to limited access of the Azure
 Account i used , i was not able to set up AD App Registration for the Key Vault,
 so i resulted to storing configuration data in AppSettings file which i'm aware of
-the Security vulnerabilities of such approach. So, kindly accept this approach from me
-being a Test Code.
+the Security vulnerabilities of such approach. So, kindly accept this approach from me being a Test Code.
 
 
 ### Azure App Service ( PAAS )
-The frontend was deployed using Static Web App and the backend deployed with
-Azure Web App. Below are the links to access them :
+The frontend was deployed using Static Web App in Azure and the backend deployed with
+Azure Web App. Both are Platform as a service(PAAS) offering high scalability,
+Availability and no management of underlying infrastructure.
+
+Below are the links to access them :
 
 ### Deployed API URL :
 https://gledu-calculatortest.azurewebsites.net/index.html
@@ -51,13 +53,16 @@ To run the API backend , simple follow this steps :
 
 
 ### Library Test  ( Angular Client)
-To run the Library Test, simple follow this steps :
+The test solution uses a 3rd party library MOQ to mock the dependencies. To run the Library Test, simple follow this steps :
 1. Navigate to the API root directory
    ``` cd   GLEducation.Lib.Test  ```
 2. Run ``` dotnet build ```
 3. Run ``` dotnet test  ```
 
 ### Frontend ( Angular Client)
+The frontend by default uses the production API endpoint but in Dev Environment, it switches to
+localHost running on Port 5000 and 50001.
+
 To run client Application, simple follow this steps :
 
 1. Ensure the API is running, the API runs on 
