@@ -73,7 +73,14 @@ To run client Application, simple follow this steps :
 3. Run ``` npm install ```
 4. Run ``` npm run start  ```
 
+### Prime Number Sample Request 
+```
+request Body : 
+[2,3,5,7,11,13,17]
 
+position : 4 
+
+```
 
 
 
