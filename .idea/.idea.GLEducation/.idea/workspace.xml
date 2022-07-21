@@ -5,23 +5,8 @@
     <projectFile profileName="GLEducation.API">GLEducation.API/GLEducation.API.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5943d5e2-2764-4c48-9d93-221b4dece9cf" name="Changes" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GLEducation/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CalculatorTest.API/Requests/Request.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CalculatorTest.Lib/Data/ILogRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CalculatorTest.API/Controllers/CalculatorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CalculatorTest.API/Controllers/CalculatorController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CalculatorTest.API/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CalculatorTest.API/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CalculatorTest.API/WeatherForecast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CalculatorTest.Lib/Data/DBContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CalculatorTest.Lib/Data/DBContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CalculatorTest.Lib/Data/LogRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CalculatorTest.Lib/Data/LogRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CalculatorTest.Lib/Entities/LogData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CalculatorTest.Lib/Entities/LogData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CalculatorTest.Lib/ISimpleCalculator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CalculatorTest.Lib/ISimpleCalculator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CalculatorTest.Lib/Logging/DatabaseLogger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CalculatorTest.Lib/Logging/DatabaseLogger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CalculatorTest.Lib/Logging/DebugLogger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CalculatorTest.Lib/Logging/DebugLogger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CalculatorTest.Lib/Logging/IDiagnosticLogger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CalculatorTest.Lib/Logging/IDiagnosticLogger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CalculatorTest.Lib/SimpleCalculator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CalculatorTest.Lib/SimpleCalculator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GLEducation.Lib.Test/SimpleCalculatorTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GLEducation.Lib.Test/SimpleCalculatorTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
+    <list default="true" id="5943d5e2-2764-4c48-9d93-221b4dece9cf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GLEducation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GLEducation/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +30,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/99f34ec5afd41f934c9189792e189b0fc486f6cfb7716f14f8e1aed88784/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b41e95a3a21dc2c729daf2e428e4fc11538d97d0806251d6123ce119ba6260/CallSiteVisitor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f18a61a5748434ab7ab4147687798ce279bf4c31be528eec6d1fdadec275faa/DefaultOutputFormatterSelector.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/khareem-usr/MyProjects/3_INTERVIEWS/GL_Education/GLEducation/CalculatorTest.API/Controllers/CalculatorController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CalculatorTest.Lib/Data/DBContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CalculatorTest.Lib/Entities/LogData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CalculatorTest.Lib/Logging/DebugLogger.cs" root0="FORCE_HIGHLIGHTING" />
@@ -113,7 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1658328308329</updated>
       <workItem from="1658328313359" duration="636000" />
-      <workItem from="1658330494367" duration="28704000" />
+      <workItem from="1658330494367" duration="29421000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1658349952603</created>
@@ -122,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658349952603</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Completed Integration">
+      <created>1658406186814</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1658406186815</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,7 +135,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="Completed Integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed Integration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
