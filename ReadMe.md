@@ -1,7 +1,11 @@
 ## Project Information
 After implementing the requirements, I decided to go a bit further to document the API 
 using Swagger and then deploy the applications both the backend API (.Net Core ) and Frontend
-(Angular) in Azure. This solution uses the following azure services,
+(Angular) in Azure. In addition, I set up a CI/CD pipeline with Github action 
+which builds on every commit to master branch in the github Repository, then
+deploy the frontend project to  Azure Static Web App. 
+
+This solution uses the following azure services,
 
 - Azure Key vault
 - Azure SQL

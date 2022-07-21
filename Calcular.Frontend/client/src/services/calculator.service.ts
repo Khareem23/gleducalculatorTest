@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { IInputData } from 'src/model/InputData';
+import {OnInit, isDevMode } from '@angular/core';
 
 
 
@@ -17,7 +18,16 @@ export class CalculatorService {
         })
       }
 
-    constructor(private http: HttpClient) { }
+      constructor(private http: HttpClient) { }
+
+      ngOnInit(){
+        if (isDevMode()) {
+             this.baseUrl = 'http://localhost:5000/';
+             console.log('Development!');
+          } else {
+            console.log('Production!');
+          }
+      }
 
 
     add(data: IInputData): Observable<any> {
