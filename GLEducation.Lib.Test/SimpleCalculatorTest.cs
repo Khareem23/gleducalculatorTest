@@ -1,4 +1,5 @@
 using System;
+using GLEducation.Lib.Entities;
 using GLEducation.Lib.Logging;
 using Moq;
 using NUnit.Framework;
@@ -33,7 +34,7 @@ namespace GLEducation.Lib.Test
         {
             var actualResult =  sut.Add(It.IsAny<int>(), It.IsAny<int>());
             
-            _loggerMock.Verify(x => x.log(It.IsAny<string>()), Times.Once);
+            _loggerMock.Verify(x => x.log(It.IsAny<LogData>()), Times.Once);
         }
         
         [Test]
@@ -52,7 +53,7 @@ namespace GLEducation.Lib.Test
         {
             var actualResult =  sut.Subtract(It.IsAny<int>(), It.IsAny<int>());
             
-            _loggerMock.Verify(x => x.log(It.IsAny<string>()), Times.Once);
+            _loggerMock.Verify(x => x.log(It.IsAny<LogData>()), Times.Once);
         }
         
         [Test]
@@ -71,7 +72,7 @@ namespace GLEducation.Lib.Test
         {
             var actualResult =  sut.Multiply(It.IsAny<int>(), It.IsAny<int>());
             
-            _loggerMock.Verify(x => x.log(It.IsAny<string>()), Times.Once);
+            _loggerMock.Verify(x => x.log(It.IsAny<LogData>()), Times.Once);
         }
         
         [Test]
@@ -81,7 +82,7 @@ namespace GLEducation.Lib.Test
         {
             var actualResult =  sut.Divide(start, by);
             
-            _loggerMock.Verify(x => x.log(It.IsAny<string>()), Times.Once);
+            _loggerMock.Verify(x => x.log(It.IsAny<LogData>()), Times.Once);
             Assert.That(actualResult, Is.EqualTo(expectedResult));
         }
 
@@ -91,6 +92,28 @@ namespace GLEducation.Lib.Test
         {
             var actualResult =  sut.Divide(start, by);
             Assert.That(actualResult,Is.EqualTo(0.0F));
+        }
+        
+        [Test]
+        [TestCase(4, 7)]
+        public void GetPrimeNumber_WhenCalled_ShouldReturnResult( int position, int expectedResult)
+        {
+            int[] primeNumbers = new int[] {2,3,5,7,11,13,17} ;
+            
+            var actualResult =  sut.GetPrimeNumber(primeNumbers, position);
+            
+            Assert.That(actualResult,Is.EqualTo(expectedResult));
+        }
+        
+        [Test]
+        [TestCase(5, 0)]
+        public void GetPrimeNumber_WhenCalledWithWrongPosition_ShouldReturnZero( int position, int expectedResult)
+        {
+            var primeNumbers = new int[] {2,3,5,7} ;
+            
+            var actualResult =  sut.GetPrimeNumber(primeNumbers, position);
+            
+            Assert.That(actualResult,Is.EqualTo(expectedResult));
         }
     }
 }

@@ -8,16 +8,18 @@ namespace GLEducation.Lib.Data
     public class LogDBContext : DbContext
     {
         private readonly IConfiguration _configuration;
-        
         public LogDBContext(DbContextOptions<LogDBContext> options,IConfiguration configuration) : base(options)
         {
             _configuration = configuration;
         }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            var conString = _configuration.GetConnectionString("GLEduLogDataDB");
-            
             options.UseSqlServer(_configuration.GetConnectionString("GLEduLogDataDB"));
+        }
+        
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<LogData>().HasKey(t => t.Id);
         }
         
         public DbSet<LogData> LogDatas { get; set; }

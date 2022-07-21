@@ -1,14 +1,18 @@
 using System;
 using System.Diagnostics;
 using System.Globalization;
+using System.Threading.Tasks;
+using GLEducation.Lib.Entities;
 
 namespace GLEducation.Lib.Logging
 {
     public class DebugLogger : IDiagnosticLogger
     {
-        public void log(string message)
+        public Task log(LogData message)
         {
-            Debug.WriteLine($"Logged Datetime: {DateTime.Now.ToString(CultureInfo.InvariantCulture)}, message : {message}");
+            Debug.WriteLine(
+                $"Operation : {message.Operation}=> Logged Datetime: {message.DateLogged}, message : {message.Result}");
+            return Task.CompletedTask;
         }
     }
 }

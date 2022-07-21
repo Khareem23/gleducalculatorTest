@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GLEducation.API.Requests;
 using GLEducation.Lib;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -23,34 +24,41 @@ namespace GLEducation.API.Controllers
 
         [HttpPost]
         [Route("/add")]
-        public async Task<ActionResult<int>> Add(int start, int amount)
+        public  Task<ActionResult<int>> Add([FromBody] Request request)
         {
-            var result = await Task.FromResult( _simpleCalculator.Add(start, amount));
-            return Ok(result);
+            var result = _simpleCalculator.Add(int.Parse(request.Start), int.Parse(request.AmountOrBy));
+            return Task.FromResult<ActionResult<int>>(Ok(result));
         }
         
         [HttpPost]
         [Route("/subtract")]
-        public async Task<ActionResult<int>> Subtract(int start, int amount)
+        public  Task<ActionResult<int>> Subtract([FromBody] Request request)
         {
-            var result = await Task.FromResult( _simpleCalculator.Subtract(start, amount));
-            return Ok(result);
+            var result = _simpleCalculator.Subtract(int.Parse(request.Start),int.Parse (request.AmountOrBy));
+            return Task.FromResult<ActionResult<int>>(Ok(result));
         }
         
         [HttpPost]
         [Route("/multiply")]
-        public async Task<ActionResult<int>> Multiply(int start, int by)
+        public  Task<ActionResult<int>> Multiply([FromBody] Request request)
         {
-            var result = await Task.FromResult( _simpleCalculator.Multiply(start, by));
-            return Ok(result);
+            var result = _simpleCalculator.Multiply( int.Parse(request.Start), int.Parse(request.AmountOrBy));
+            return Task.FromResult<ActionResult<int>>(Ok(result));
         }
         
         [HttpPost]
         [Route("/divide")]
-        public async Task<ActionResult<float>> Divide(int start, int by)
+        public Task<ActionResult<float>> Divide([FromBody] Request request)
         {
-            var result = await Task.FromResult( _simpleCalculator.Divide(start, by));
-            return Ok(result);
+            var result =_simpleCalculator.Divide(int.Parse(request.Start), int.Parse(request.AmountOrBy));
+            return Task.FromResult<ActionResult<float>>(Ok(result));
+        }
+
+        [HttpPost, Route("/prime-number/{position:int}")]
+        public Task<ActionResult<float>> Divide([FromBody] int[] primeNumbers, int position)
+        {
+            var result =_simpleCalculator.GetPrimeNumber(primeNumbers, position);
+            return Task.FromResult<ActionResult<float>>(Ok(result));
         }
         
     }

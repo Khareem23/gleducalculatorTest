@@ -1,9 +1,10 @@
+using System;
 using System.Threading.Tasks;
 using GLEducation.Lib.Entities;
 
 namespace GLEducation.Lib.Data
 {
-    public class LogRepository 
+    public class LogRepository : ILogRepository
     {
         private readonly LogDBContext _dbContext;
         public LogRepository(LogDBContext  dbContext)
@@ -11,10 +12,11 @@ namespace GLEducation.Lib.Data
             _dbContext = dbContext;
         }
         
-        public async Task AddData(LogData logMessage)
+        public  Task SaveData(LogData logMessage)
         {
-            await _dbContext.LogDatas.AddAsync(logMessage);
-            await _dbContext.SaveChangesAsync();
+            _dbContext.LogDatas.Add(logMessage);
+            _dbContext.SaveChanges();
+            return Task.CompletedTask;
         }
     }
 }

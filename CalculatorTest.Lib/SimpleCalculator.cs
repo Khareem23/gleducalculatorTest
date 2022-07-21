@@ -1,4 +1,6 @@
 using System;
+using System.Threading.Tasks;
+using GLEducation.Lib.Entities;
 using GLEducation.Lib.Logging;
 
 namespace GLEducation.Lib
@@ -15,21 +17,21 @@ namespace GLEducation.Lib
         public int Add(int start, int amount)
         {
             var result = start + amount;
-            _logger.log($"The result of Addition : {result}");
+             _logger.log(new LogData(){Operation = "Addition",Result = result.ToString(),DateLogged = DateTime.Now});
             return result;
         }
 
         public int Subtract(int start, int amount)
         {
             var result = start - amount;
-            _logger.log($"The result of Subtraction : {result}");
+            _logger.log(new LogData(){Operation = "Subtract",Result = result.ToString(),DateLogged = DateTime.Now});
             return result;
         }
 
         public int Multiply(int start, int by)
         {
             var result = start * by;
-            _logger.log($"The result of Multiplication : {result}");
+            _logger.log(new LogData(){Operation = "Multiply",Result = result.ToString(),DateLogged = DateTime.Now});
             return result;
         }
 
@@ -39,9 +41,14 @@ namespace GLEducation.Lib
             {
                 return 0.0F;
             }
-            var result = start / by;
-            _logger.log($"The result of Division : {result}");
+            var result = (float) start / by;
+            _logger.log(new LogData(){Operation = "Divide",Result = result.ToString(),DateLogged = DateTime.Now});
             return result;
+        }
+
+        public int GetPrimeNumber(int[] primeNumbers, int index)
+        {
+            return index >= primeNumbers.Length ? 0 : primeNumbers[index-1];
         }
     }
 }

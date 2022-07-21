@@ -1,10 +1,20 @@
+using System.Threading.Tasks;
+using GLEducation.Lib.Data;
+using GLEducation.Lib.Entities;
+
 namespace GLEducation.Lib.Logging
 {
     public class DatabaseLogger : IDiagnosticLogger
     {
-        public void log(string message)
+        private readonly ILogRepository _iLogRepository;
+        public DatabaseLogger(ILogRepository logRepository)
         {
-            throw new System.NotImplementedException();
+            _iLogRepository = logRepository;
+        }
+        public Task log(LogData message)
+        {
+             _iLogRepository.SaveData(message);
+             return Task.CompletedTask;
         }
     }
 }

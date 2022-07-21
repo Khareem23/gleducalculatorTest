@@ -31,12 +31,25 @@ namespace GLEducation.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("myCorPolicy", policy =>
+                {
+                    policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                });
+            }); 
             services.AddDbContext<LogDBContext>(options => 
                 options.UseSqlServer(Configuration.GetConnectionString("GLEduLogDataDB"))
                 );
             
             services.AddScoped<ISimpleCalculator,SimpleCalculator>();
-            services.AddScoped<IDiagnosticLogger,DebugLogger>();
+            
+            // UnComment the one you want to enable &  Comment the other implementation of IDiagnosticLogger
+             services.AddScoped<IDiagnosticLogger,DatabaseLogger>();
+            //services.AddScoped<IDiagnosticLogger,DebugLogger>();
+            
+            services.AddScoped<ILogRepository,LogRepository>();
+            
           
             
             services.AddSwaggerGen(c =>
@@ -61,9 +74,11 @@ namespace GLEducation.API
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
 
             app.UseRouting();
+            
+            app.UseCors("myCorPolicy");
 
             app.UseAuthorization();
 

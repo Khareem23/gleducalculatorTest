@@ -1,7 +1,19 @@
 ## Project Information
 This solution uses the following azure services, i decided to go
-a bit further than requirement to demonstrate the ability to 
-work end to end a software development solution. 
+a bit further than requirement to demonstrate my ability to 
+work end to end any enterprise software solutions. 
+
+According to the requirement , there are 2 Implementations 
+of the Diagnostic Interface. The default concrete implementation is the 
+database logger which logs result, operations and timestamp to a MS SQL Server 
+Database deployed by Azure SQL Service.
+
+To view the the debugOutput logger , Go to CalculatorTest.API, inside the 
+startup.cs file, Uncomment this line & comment the other
+```
+// services.AddScoped<IDiagnosticLogger,DebugLogger>();
+```
+
 
 - Azure Key vault
 - Azure SQL
